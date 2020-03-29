@@ -18,14 +18,18 @@ namespace CoronaPandemicApp
         {
             InitializeComponent();
 
-            UserBO objUBO = new UserBO();
-            /*
-             calling BussinessObject (UserBO) 
-             And passing all value from Control to it.
-            */
-
-            objUBO.Name = "Abc";
-            
+            UserBO objUBO = new UserBO() {
+                UserName = "admin",
+                Password="123456",
+                Name="Admin",
+                Email="admin@gmail.com",
+                Mobile = "1234567890",
+                Status = true,
+                CreatedBy="Admin",
+                CreatedAt=DateTime.Now,
+                ModifiedBy="Admin",
+                ModifiedAt = DateTime.Now
+            };
 
             UserBL objUBL = new UserBL();
 

@@ -8,14 +8,15 @@ namespace BussinessObject
     public class BaseBO // Declare Class Public to Access any where 
     {
         //Declaring UserRegistration Variables
-        private string _Id;
+        private int _Id;
+        private bool _Status;
         private string _CreatedBy;
-        private string _CreatedAt;
+        private DateTime _CreatedAt;
         private string _ModifiedBy;
-        private string _ModifiedAt;
+        private DateTime _ModifiedAt;
 
         // Get and set values
-        public string Id
+        public int Id
         {
             get
             {
@@ -35,7 +36,7 @@ namespace BussinessObject
             }
         }
 
-        public string CreatedAt
+        public DateTime CreatedAt
         {
             get
             {
@@ -59,7 +60,7 @@ namespace BussinessObject
             }
         }
 
-        public string ModifiedAt
+        public DateTime ModifiedAt
         {
             get
             {
@@ -68,6 +69,18 @@ namespace BussinessObject
             set
             {
                 _ModifiedAt = value;
+            }
+        }
+
+        public bool Status
+        {
+            get
+            {
+                return _Status;
+            }
+            set
+            {
+                _Status = value;
             }
         }
     }

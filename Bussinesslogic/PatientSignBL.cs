@@ -6,7 +6,7 @@ using DataAccess; // for acessing DataAccess class
 using BussinessObject; // for acessing bussiness object class
 namespace Bussinesslogic
 {
-    public class UserBL
+    public class PatientSignBL
     {
         public int SaveUserregisrationBL(UserBO objUserBL) // passing Bussiness object Here 
         {
@@ -17,7 +17,7 @@ namespace Bussinesslogic
                 return objUserda.AddUserDetails(objUserBL); // calling Method of DataAccess 
 
             }
-            catch (Exception ex)
+            catch
             {
                 throw;
             }

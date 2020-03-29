@@ -9,11 +9,11 @@ using BussinessObject;  // for acessing bussiness object class
 namespace DataAccess
 {
 
-    public class UserDA
+    public class PatientSignDA
     {
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connectionString"].ToString());
 
-        public int AddUserDetails(UserBO ObjBO) // passing Bussiness object Here 
+        public int AddPatientSignDetails(PatientSignBO ObjBO) // passing Bussiness object Here 
         {
             try
             {
@@ -21,14 +21,16 @@ namespace DataAccess
                  To in Bussiness object and then Pass it to Bussiness logic and then to DataAcess
                  this way the flow carry on*/
 
-                SqlCommand cmd = new SqlCommand("Userinsertupdatedelete", con);
+                SqlCommand cmd = new SqlCommand("PatientSigninsertupdatedelete", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@id", ObjBO.Id);
-                cmd.Parameters.AddWithValue("@user_name", ObjBO.UserName);
-                cmd.Parameters.AddWithValue("@password", ObjBO.Password);
-                cmd.Parameters.AddWithValue("@name", ObjBO.Name);
-                cmd.Parameters.AddWithValue("@email", ObjBO.Email);
-                cmd.Parameters.AddWithValue("@mobile", ObjBO.Mobile);
+                cmd.Parameters.AddWithValue("@patient_id", ObjBO.PatientId);
+                cmd.Parameters.AddWithValue("@fever", ObjBO.Fever);
+                cmd.Parameters.AddWithValue("@cough", ObjBO.Cough);
+                cmd.Parameters.AddWithValue("@shortness_inBreath", ObjBO.ShortnessInBreath);
+                cmd.Parameters.AddWithValue("@pneumonia", ObjBO.Pneumonia);
+                cmd.Parameters.AddWithValue("@store_throat", ObjBO.StoreThroat);
+                cmd.Parameters.AddWithValue("@tired", ObjBO.Tired);
                 cmd.Parameters.AddWithValue("@status", ObjBO.Status);
                 cmd.Parameters.AddWithValue("@created_by", ObjBO.CreatedBy);
                 cmd.Parameters.AddWithValue("@created_at", Utilities.ConvertHelper.ToDateTime(ObjBO.CreatedAt));

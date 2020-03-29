@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BussinessObject
 {
-    public class UserBO: BaseBO
+    public class UserBO : BaseBO
     {
         //Declaring UserRegistration Variables
         private string _UserName;
@@ -13,7 +13,6 @@ namespace BussinessObject
         private string _Name;
         private string _Email;
         private string _Mobile;
-        private string _Status;        
 
         public string UserName
         {
@@ -57,7 +56,7 @@ namespace BussinessObject
         {
             get
             {
-                return _Email; 
+                return _Email;
             }
 
             set
@@ -71,24 +70,11 @@ namespace BussinessObject
 
             get
             {
-               return _Mobile;
+                return _Mobile;
             }
             set
             {
                 _Mobile = value;
-            }
-        }
-
-        public string Status
-        {
-
-            get
-            {
-                return _Status;
-            }
-            set
-            {
-                _Status = value;
             }
         }
     }
