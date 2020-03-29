@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoronaPandemicApp", "CoronaPandemicApp\CoronaPandemicApp.csproj", "{F3F68445-0811-45D0-ADE2-CD64979F89C1}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C12A8ABC-A03E-465E-B4B6-676BFAEBC872}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\Quang\Documents\CoronaPandemic.sql = C:\Users\Quang\Documents\CoronaPandemic.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
