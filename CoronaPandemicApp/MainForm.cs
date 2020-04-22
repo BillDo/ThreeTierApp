@@ -18,22 +18,28 @@ namespace CoronaPandemicApp
         {
             InitializeComponent();
 
-            UserBO objUBO = new UserBO() {
-                UserName = "admin",
-                Password="123456",
-                Name="Admin",
-                Email="admin@gmail.com",
-                Mobile = "1234567890",
-                Status = true,
-                CreatedBy="Admin",
-                CreatedAt=DateTime.Now,
-                ModifiedBy="Admin",
-                ModifiedAt = DateTime.Now
-            };
+            //UserBO objUBO = new UserBO()
+            //{
+            //    UserName = "admin",
+            //    Password = "123456",
+            //    Name = "Admin",
+            //    Email = "admin@gmail.com",
+            //    Mobile = "1234567890",
+            //    Status = true,
+            //    CreatedBy = "Admin",
+            //    CreatedAt = DateTime.Now,
+            //    ModifiedBy = "Admin",
+            //    ModifiedAt = DateTime.Now
+            //};
 
-            UserBL objUBL = new UserBL();
+            //UserBL objUBL = new UserBL();
 
-            int result = objUBL.SaveUserregisrationBL(objUBO);
+            //int result = objUBL.SaveUserregisrationBL(objUBO);
+        }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
